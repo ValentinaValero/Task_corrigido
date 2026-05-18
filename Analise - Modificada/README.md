@@ -15,7 +15,7 @@ O sistema simula uma aplicação de gerenciamento de tarefas, apresentando uma p
 - Validação de formulário com JavaScript
 - Feedback visual de erro e sucesso
 - Limpeza automática do formulário após envio
-- Organização profissional de arquivos em pastas
+- Adição de anotações funcionais com JavaScript e Local Storage
 
 ---
 
