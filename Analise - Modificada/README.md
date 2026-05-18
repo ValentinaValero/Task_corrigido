@@ -57,17 +57,18 @@ Analise - Modificada/
 
 1. Clone o repositório:
 
-
-git clone https://github.com/seu-usuario/taskmaster-pro
+```bash
+git clone [https://github.com/seu-usuario/taskmaster-pro](https://github.com/ValentinaValero/Task_corrigido.git)
+```
 
 
 2. Acesse a pasta do projeto.
 
 3. Abra o arquivo:
 
-
-html/layout.html
-
+```bash
+HTML/inicio.html
+```
 
 4. Navegue entre as páginas utilizando a barra de navegação.
 
