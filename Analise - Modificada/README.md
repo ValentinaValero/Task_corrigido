@@ -31,20 +31,23 @@ O sistema simula uma aplicação de gerenciamento de tarefas, apresentando uma p
 ## 📂 Estrutura do Projeto
 
 
-TaskMaster-Pro/
+Analise - Modificada/
 │
-├── html/
-│ ├── layout.html
-│ └── contato.html
+├── HTML/
+│ ├── contato.html
+│ └── inicio.html
+│ └── sobre.html
 │
-├── css/
-│ ├── layout.css
-│ └── contato.css
+├── CSS/
+│ ├── contato.css
+│ └── inicio.css
+│ └── sobre.css
 │
-├── js/
-│ └── contato.js
+├── JS/
+│ ├── contato.js
+│ └── inicio.js
 │
-├── img/
+├── IMG/
 │ └── wallpaper.png
 │
 └── README.md
