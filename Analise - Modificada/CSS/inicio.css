@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #efefef;
+}
+
+main {
+    flex: 1;
+    padding: 50px 30px;
+}
+
+/* GRID FIXO */
+#notes {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 320px);
+    /* impede expansão */
+    justify-content: center;
+    gap: 30px;
+}
+
+/* RESPONSIVO */
+@media(max-width:1100px) {
+    #notes {
+        grid-template-columns: repeat(2, 320px);
+    }
+}
+
+@media(max-width:730px) {
+    #notes {
+        grid-template-columns: 320px;
+    }
+}
+
+/* CARD */
+.card,
+.add-card {
+    width: 320px;
+    height: 220px;
+    background: #cfe9ff;
+    border-radius: 10px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.add-card:hover {
+    transform: scale(1.03);
+    background: #89a3b9;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.add-card button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+    background: #274b99;
+    color: #fff;
+    font-size: 38px;
+    cursor: pointer;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p {
+    margin-bottom: 12px;
+    white-space: pre-wrap;
+}
+
+/* LISTA ARRUMADA */
+.card ul {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.card li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    /* espaço pequeno */
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.card li input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.card li span {
+    flex: 1;
+}
+
+/* BOTÕES */
+.actions {
+    margin-top: auto;
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.edit {
+    background: #4361ee;
+    color: #fff;
+}
+
+.delete {
+    background: #c1121f;
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    background: #343392;
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+}
+
+/* MODAL */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    z-index: 10;
+}
+
+.modal-content {
+    width: 100%;
+    max-width: 500px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.task-row {
+    margin-bottom: 8px;
+}
+
+/* ===== 1. MODAL NOVA NOTA ===== */
+
+.modal-content button {
+    font-size: 16px;
+}
+
+/* BOTÕES LADO A LADO */
+#typeModal .modal-content {
+    max-width: 600px;
+}
+
+#typeModal .modal-content h2 {
+    margin-bottom: 25px;
+}
+
+#typeModal .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: flex-start;
+}
+
+#typeModal h2 {
+    width: 100%;
+}
+
+#typeModal button {
+    min-width: 220px;
+    height: 60px;
+    font-size: 18px;
+    border-radius: 10px;
+}
+
+/* botão cancelar embaixo */
+#typeModal .delete {
+    width: 160px;
+    margin-top: 10px;
+}
+
+
+/* ===== 2. SALVAR VERDE E ORDEM INVERTIDA ===== */
+
+.modal-content button {
+    padding: 12px 18px;
+}
+
+.modal-content button:first-of-type {
+    background: #16a34a;
+    /* verde */
+    color: #fff;
+}
+
+.modal-content button:first-of-type:hover {
+    background: #15803d;
+}
+
+/* garante ordem visual */
+.modal-content .delete {
+    order: 2;
+}
+
+.modal-content button:not(.delete) {
+    order: 1;
+}
+
+
+/* ===== 3. LISTA DE TAREFAS ===== */
+
+#taskTitle {
+    margin-bottom: 25px;
+    /* distância maior do título */
+}
+
+#tasksArea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* campos mais próximos */
+}
+
+.task-row {
+    margin-bottom: 0;
+}
+
+.task-row input {
+    margin-bottom: 0;
+}
+
+/* ===== LISTA DE TAREFAS CORRIGIDO ===== */
+
+/* espaço após último campo */
+#tasksArea {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 22px;
+    /* afasta do botão + Nova tarefa */
+}
+
+/* botão adicionar tarefa */
+#taskModal button {
+    margin-right: 10px;
+}
+
+/* BOTÕES SALVAR / CANCELAR */
+#taskModal .modal-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+#taskModal .modal-content h2,
+#taskModal .modal-content input,
+#taskModal #tasksArea {
+    width: 100%;
+}
+
+/* botão salvar */
+#taskModal .modal-content button:not(.delete):not(:nth-of-type(1)) {
+    background: #16a34a;
+    color: #fff;
+}
+
+/* ordem correta */
+#taskModal .modal-content button:nth-last-child(2) {
+    order: 1;
+    /* salvar */
+}
+
+#taskModal .modal-content .delete {
+    order: 2;
+    /* cancelar */
+}
+
+header {
+    background: #94c6ff;
+    padding: 15px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    margin-right: 100px;
+    margin-left: 100px;
+    color: #0b0a4d;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.ajuste {
+    margin-left: 30%;
+}

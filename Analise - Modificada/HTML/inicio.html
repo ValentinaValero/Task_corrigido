@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../CSS/inicio.css">
+<title>TaskMaster Pro</title>
+
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="inicio.html">Inicio</a>
+            <a href="sobre.html">Sobre</a>
+            <a href="contato.html">Contato</a>
+        </nav>
+    </header>
+
+<main>
+<section id="notes"></section>
+</main>
+
+<footer>
+<p>© 2026 - TaskMaster Pro | Sistema de Gerenciamento de Tarefas</p>
+</footer>
+
+<!-- ESCOLHA -->
+<div class="modal" id="typeModal">
+<div class="modal-content">
+<h2>Nova Nota</h2>
+
+<button onclick="openQuickNote()">📝 Anotação Rápida</button>
+<br><br>
+<button onclick="openTaskList()">✅ Lista de Tarefas</button>
+<br><br>
+<button class="delete ajuste" onclick="closeModal('typeModal')">Cancelar</button>
+</div>
+</div>
+
+<!-- NOTA -->
+<div class="modal" id="noteModal">
+<div class="modal-content">
+<h2>Anotação</h2>
+
+<input type="text" id="noteTitle" placeholder="Título">
+<textarea id="noteText" placeholder="Digite aqui..."></textarea>
+
+<button onclick="saveQuickNote()">Salvar</button>
+<button class="delete" onclick="closeModal('noteModal')">Cancelar</button>
+</div>
+</div>
+
+<!-- TASK -->
+<div class="modal" id="taskModal">
+<div class="modal-content">
+<h2>Lista de Tarefas</h2>
+
+<input type="text" id="taskTitle" placeholder="Título">
+
+<div id="tasksArea"></div>
+
+<button onclick="addTaskField()">+ Nova tarefa</button>
+<br><br>
+<button onclick="saveTaskList()">Salvar</button>
+<button class="delete" onclick="closeModal('taskModal')">Cancelar</button>
+</div>
+</div>
+
+<script src="../JS/inicio.js"></script>
+
+</body>
+</html>
+
