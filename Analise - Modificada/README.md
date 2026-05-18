@@ -30,30 +30,28 @@ O sistema simula uma aplicação de gerenciamento de tarefas, apresentando uma p
 
 ## 📂 Estrutura do Projeto
 
-
+```bash
 Analise - Modificada/
 │
 ├── HTML/
-│ ├── contato.html
-│ └── inicio.html
-│ └── sobre.html
+│   ├── contato.html
+│   ├── inicio.html
+│   └── sobre.html
 │
 ├── CSS/
-│ ├── contato.css
-│ └── inicio.css
-│ └── sobre.css
+│   ├── contato.css
+│   ├── inicio.css
+│   └── sobre.css
 │
 ├── JS/
-│ ├── contato.js
-│ └── inicio.js
+│   ├── contato.js
+│   └── inicio.js
 │
 ├── IMG/
-│ └── wallpaper.png
+│   └── wallpaper.png
 │
 └── README.md
-
-
----
+```
 
 ## ⚙️ Como Executar o Projeto
 
