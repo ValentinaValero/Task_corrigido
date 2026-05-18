@@ -33,18 +33,18 @@ O sistema simula uma aplicação de gerenciamento de tarefas, apresentando uma p
 
 TaskMaster-Pro/
 │
-├── html/
+├── HTML/
 │ ├── layout.html
 │ └── contato.html
 │
-├── css/
+├── CSS/
 │ ├── layout.css
 │ └── contato.css
 │
-├── js/
+├── JS/
 │ └── contato.js
 │
-├── img/
+├── IMG/
 │ └── wallpaper.png
 │
 └── README.md
