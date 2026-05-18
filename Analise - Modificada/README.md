@@ -81,6 +81,7 @@ Durante a auditoria do projeto, foram identificados e corrigidos:
 - Correção de links quebrados na navbar
 - Padronização de layout entre páginas
 - Implementação de validação personalizada com JS
+- Adição de funcionalidades
 - Melhoria de responsividade
 - Estrutura semântica adequada
 - Organização em pastas profissionais
